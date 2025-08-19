@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Face Detection App</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <h1>Real-time Face Detection</h1>
+        <p class="description">
+          An automated face detection system built with TensorFlow.js and BlazeFace. 
+          Captures video from webcam, detects faces in real-time, and draws bounding boxes. 
+          Features smart model loading, canvas overlay rendering, and structured detection logging.
+        </p>
+        
+        <div class="controls">
+          <button id="startBtn">Start Camera</button>
+          <button id="stopBtn" disabled>Stop Camera</button>
+          <button id="captureBtn" disabled>Capture Screenshot</button>
+        </div>
+        
+        <div class="video-container">
+          <video id="video" autoplay muted></video>
+          <canvas id="canvas"></canvas>
+        </div>
+        
+        <div class="status">
+          <p id="statusText">Click "Start Camera" to begin face detection</p>
+          <div id="detectionCount">Faces detected: 0</div>
+        </div>
+        
+        <div class="screenshots" id="screenshots">
+          <h3>Captured Screenshots</h3>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
